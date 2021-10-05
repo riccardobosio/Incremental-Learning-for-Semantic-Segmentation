@@ -268,7 +268,7 @@ def main(opts):
     # check if random is equal here.
     logger.print(torch.randint(0,100, (1,1)))
     # train/val here
-    while cur_epoch < opts.epochs and TRAIN:
+    while cur_epoch < 20 and TRAIN:
         # =====  Train  =====
         model.train()
 

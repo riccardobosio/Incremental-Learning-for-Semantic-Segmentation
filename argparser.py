@@ -32,7 +32,7 @@ def modify_command_options(opts):
             opts.regularizer = "pi"
             opts.reg_importance = 500
         if opts.method == 'MiB':
-            opts.loss_kd = 10
+            opts.loss_kd = 100
             opts.unce = True
             opts.unkd = True
             opts.init_balanced = True

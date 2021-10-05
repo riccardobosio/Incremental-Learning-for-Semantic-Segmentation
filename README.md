@@ -1,11 +1,6 @@
-# MLDLproject
-Incremental Learning for Semantic Segmentation
+# Semantic Segmentation in an Incremental Learning setting
 
-MiB paper: 
-   @inProceedings{cermelli2020modeling,
-   author = {Cermelli, Fabio and Mancini, Massimiliano and Rota Bul\`o, Samuel and Ricci, Elisa and Caputo, Barbara},
-   title  = {Modeling the Background for Incremental Learning in Semantic Segmentation},
-   booktitle = {Computer Vision and Pattern Recognition (CVPR)},
-   year      = {2020},
-   month     = {June}
-   }
+In this project there is the development of a light architecture (IncrementalBiSeNet) that allows to perform Semantic Segmentation in Real Time.
+Moreover, this Neural Network is tested in a challenging scenario: Incremental Learning.
+
+The code is a modified version of: https://github.com/fcdl94/MiB provided by Cermelli Fabio.

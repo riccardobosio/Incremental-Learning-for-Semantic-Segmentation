@@ -5,7 +5,7 @@ from apex import amp
 from functools import reduce
 
 from utils.loss import KnowledgeDistillationLoss, BCEWithLogitsLossWithIgnoreIndex, \
-    UnbiasedKnowledgeDistillationLoss, UnbiasedCrossEntropy, IcarlLoss
+    UnbiasedKnowledgeDistillationLoss, UnbiasedCrossEntropy, IcarlLoss, FocalUnbiasedCrossEntropy
 from utils import get_regularizer
 
 
@@ -31,9 +31,9 @@ class Trainer:
             self.criterion = BCEWithLogitsLossWithIgnoreIndex(reduction=reduction)
         elif opts.unce and self.old_classes != 0:
             self.criterion = UnbiasedCrossEntropy(old_cl=self.old_classes, ignore_index=255, reduction=reduction)
+#             self.criterion = FocalUnbiasedCrossEntropy(old_cl=self.old_classes, ignore_index=255, reduction=reduction)
         else:
             self.criterion = nn.CrossEntropyLoss(ignore_index=255)
-            print("NORMAL CROSS ENTROPY LOSS")
 
         # ILTSS
         self.lde = opts.loss_de
